@@ -32,7 +32,8 @@ private:
     Ui::MainWindow *ui;
     SettingsDialog *settings;
     QSerialPort *serial;
-    void ParseSerialData(QString);
+    void ParseParam(void);
+    QByteArray m_inParamBuffer;
 };
 
 #endif // MAINWINDOW_H
