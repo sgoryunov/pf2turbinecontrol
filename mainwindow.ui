@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>375</width>
-    <height>221</height>
+    <width>380</width>
+    <height>209</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -102,7 +102,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>110</y>
+      <y>90</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -115,7 +115,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>140</y>
+      <y>120</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -127,28 +127,37 @@
    <widget class="QLCDNumber" name="lcdNumber">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>110</y>
-      <width>64</width>
-      <height>23</height>
+      <x>170</x>
+      <y>90</y>
+      <width>71</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLCDNumber" name="lcdNumber_2">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>140</y>
-      <width>64</width>
-      <height>23</height>
+      <x>170</x>
+      <y>120</y>
+      <width>71</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>110</y>
+      <y>100</y>
       <width>61</width>
       <height>16</height>
      </rect>
@@ -161,7 +170,7 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>140</y>
+      <y>130</y>
       <width>61</width>
       <height>16</height>
      </rect>
@@ -171,6 +180,9 @@
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -180,10 +192,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>Permission</string>
+     <string>Measuring</string>
     </property>
     <property name="checkable">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_2">
@@ -199,7 +211,7 @@
      <string>Veto</string>
     </property>
     <property name="checkable">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_3">
@@ -215,14 +227,14 @@
      <string>Request</string>
     </property>
     <property name="checkable">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>110</y>
+      <y>90</y>
       <width>31</width>
       <height>20</height>
      </rect>
@@ -235,7 +247,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>140</y>
+      <y>130</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -257,10 +269,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>Measuring</string>
+     <string>Permission</string>
     </property>
     <property name="checkable">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -269,7 +281,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>375</width>
+     <width>380</width>
      <height>21</height>
     </rect>
    </property>

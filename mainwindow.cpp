@@ -109,6 +109,18 @@ void MainWindow::ParseParam()
             _signals[j] = buff.toInt();
             buff.clear();
         }
+        ui->lcdNumber->display(measTime);
+        ui->lcdNumber_2->display(waitingTime);
+
+        if(_signals[0]) ui->checkBox_4->setCheckState(Qt::Checked);
+        else ui->checkBox_4->setCheckState(Qt::Unchecked);
+        if(_signals[1]) ui->checkBox->setCheckState(Qt::Checked);
+        else ui->checkBox->setCheckState(Qt::Unchecked);
+        if(_signals[2]) ui->checkBox_2->setCheckState(Qt::Checked);
+        else ui->checkBox_2->setCheckState(Qt::Unchecked);
+        if(_signals[3]) ui->checkBox_3->setCheckState(Qt::Checked);
+        else ui->checkBox_3->setCheckState(Qt::Unchecked);
+
         qDebug()<<measTime<<" "<<waitingTime<<" "<<
                _signals[0]<<" "<<_signals[1]<<" "<<_signals[2]<<" "<<_signals[3];
 
@@ -133,10 +145,12 @@ void MainWindow::on_pushButton_3_clicked()
 // send parameters
 void MainWindow::on_pushButton_clicked()
 {
-//    QString buf("!IN_PARS:");
-
-
-//    for(quint8 i(0);i<buf.length();i++)
-//        serial->putChar(buf.at(i));
+    QString buf = QString("!IN_PARS:"
+                          +ui->lineEdit_2->text()
+                          +","
+                          +ui->lineEdit->text());
+    qDebug()<<buf;
+    for(quint8 i(0);i<buf.toLocal8Bit().length();i++)
+        serial->putChar(buf.toLocal8Bit().at(i));
 
 }
